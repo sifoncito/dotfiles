@@ -26,6 +26,7 @@ Plug 'Yggdroot/indentLine'
 
 Plug 'ayu-theme/ayu-vim'
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'YorickPeterse/happy_hacking.vim'
 
 
 Plug 'airblade/vim-gitgutter'
@@ -126,9 +127,9 @@ let g:solarized_termtrans=1
 
 set termguicolors     " enable true colors support
 "let ayucolor="light"  " for light version of theme
-let ayucolor="mirage" " for mirage version of theme
+"let ayucolor="mirage" " for mirage version of theme
 "let ayucolor="dark"   " for dark version of theme
-colorscheme ayu
+colorscheme happy_hacking
 
 
 
