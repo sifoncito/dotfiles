@@ -34,6 +34,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 
+Plug 'https://github.com/mkitt/tabline.vim'
+
+Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
 
 " Turn on syntax highlighting
@@ -142,13 +146,14 @@ nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 
 
 
-
+let g:airline_theme='molokai'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Plugin settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeMapOpenInTab='\r'
 
 let g:deoplete#enable_at_startup = 1
 
