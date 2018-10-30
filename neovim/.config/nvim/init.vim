@@ -38,6 +38,8 @@ Plug 'https://github.com/mkitt/tabline.vim'
 
 Plug 'ryanoasis/vim-devicons'
 
+Plug 'majutsushi/tagbar'
+
 call plug#end()
 
 " Turn on syntax highlighting
@@ -133,14 +135,14 @@ set termguicolors     " enable true colors support
 "let ayucolor="light"  " for light version of theme
 "let ayucolor="mirage" " for mirage version of theme
 "let ayucolor="dark"   " for dark version of theme
-colorscheme happy_hacking
+colorscheme palenight
 
 
 
 
 
 
-nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+nnoremap <buffer> <F9> :exec '!python3' shellescape(@%, 1)<cr>
 
 
 
