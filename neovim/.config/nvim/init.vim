@@ -1,45 +1,31 @@
-" Don't try to be vi compatible
-set nocompatible
+"Aldo R. neovim config
 
-" Helps force plugins to load correctly when it is turned back on below
+set nocompatible "No lo haga compa 
 filetype off
-
 """"""""""""""""""""""""""""""""""
 "Plugins 
 """"""""""""""""""""""""""""""""""
 
 call plug#begin('~/.vim/plugged')
 
-" Better file browser
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'                                     "better file browsing
+Plug 'lilydjwg/colorizer'                                      "colorize text 
+Plug 'Yggdroot/indentLine'                                     "show indentlines
+Plug 'drewtempelmeyer/palenight.vim'                           "nice colorscheme
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }  "completion framework
+Plug 'zchee/deoplete-jedi'                                     "python completion
+Plug 'https://github.com/mkitt/tabline.vim'                    "tabs numbers
+Plug 'ryanoasis/vim-devicons'                                  "filetype icons
+Plug 'majutsushi/tagbar'                                       "tagbar
+Plug 'airblade/vim-gitgutter'                                  "git
+Plug 'vim-airline/vim-airline'                                 "statusline
+Plug 'vim-airline/vim-airline-themes'                          "statusline theme
 
-Plug 'mhinz/vim-startify'
+Plug 'w0rp/ale'
 
-" Airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'Raimondi/delimitMate'
 
-" Paint css colors with the real color
-Plug 'lilydjwg/colorizer'
-
-Plug 'Yggdroot/indentLine'
-
-Plug 'ayu-theme/ayu-vim'
-Plug 'drewtempelmeyer/palenight.vim'
-Plug 'YorickPeterse/happy_hacking.vim'
-
-
-Plug 'airblade/vim-gitgutter'
-
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
-
-Plug 'https://github.com/mkitt/tabline.vim'
-
-Plug 'ryanoasis/vim-devicons'
-
-Plug 'majutsushi/tagbar'
-
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 call plug#end()
 
 " Turn on syntax highlighting
@@ -48,8 +34,7 @@ syntax on
 " For plugins to load correctly
 filetype plugin indent on
 
-" TODO: Pick a leader key
-" let mapleader = ","
+let mapleader = ","
 
 " Security
 set modelines=0
@@ -123,21 +108,17 @@ set listchars=tab:▸\ ,eol:¬
 " Or use your leader key + l to toggle on/off
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
-" Color scheme (terminal)
+" appearance
 set t_Co=256
 set background=dark
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
-" put https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
-" in ~/.vim/colors/ and uncomment:
 
 set termguicolors     " enable true colors support
-"let ayucolor="light"  " for light version of theme
-"let ayucolor="mirage" " for mirage version of theme
-"let ayucolor="dark"   " for dark version of theme
+
 colorscheme palenight
 
-
+let g:airline_theme='wombat'
 
 
 
@@ -145,18 +126,33 @@ colorscheme palenight
 nnoremap <buffer> <F9> :exec '!python3' shellescape(@%, 1)<cr>
 
 
+" Some programming languages work better when 2 spaces for tab is used...
+autocmd FileType html,css,sass,scss,javascript setlocal sw=2 sts=2
+autocmd FileType json setlocal sw=2 sts=2
+autocmd FileType ruby,eruby setlocal sw=2 sts=2
+autocmd FileType yaml setlocal sw=2 sts=2
 
 
-
-let g:airline_theme='molokai'
+set cursorline
+set colorcolumn=80
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Plugin settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:tablineclosebutton=1
 
-map <C-n> :NERDTreeToggle<CR>
-let NERDTreeMapOpenInTab='\r'
+highlight GitGutterAdd ctermbg=green ctermfg=green
+highlight GitGutterRemove ctermbg=red ctermfg=red
+highlight GitGutterChange ctermbg=cyan ctermfg=cyan
 
+
+let g:python_highlight_all = 1
+
+
+" NERDtree
+map <Leader>nt :NERDTreeToggle<CR>
+let NERDTreeQuitOnOpen=1
+let NERDTreeWinSize=20
 let g:deoplete#enable_at_startup = 1
 
 set completeopt+=noinsert
