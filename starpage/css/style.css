@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+body{
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 10px;
+	background-color: #141516;
+}
+.startPageHeader{
+	text-align: center;
+	margin-top: 10%;
+	color: white;
+}
+/*These are modifications of the CSS template from W3Schools located here:
+  https://www.w3schools.com/css/tryit.asp?filename=trycss_template1_float*/
+.column {
+    float: left;
+    width: 30%;
+    padding-left: 10px;
+    margin-left:10px;
+    background-color: #282a36;
+    font-family: 'Inconsolata', monospace;
+    font-size: 16px;
+    color: #35B5F0;
+    border-radius: 5px;
+}
+.column a{
+	text-decoration: none;
+	color: #5af78e;
+}
+.column ul, li{
+	list-style-type:none;
+}
+.row{
+	margin-left: 20%;
+	margin-right: 20%;
+	text-align: left;
+}
