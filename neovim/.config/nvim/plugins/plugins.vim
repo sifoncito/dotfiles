@@ -16,9 +16,14 @@ Plug 'airblade/vim-gitgutter'                                  "git
 
 Plug 'hzchirs/vim-material'
 Plug 'jacoborus/tender.vim'
+Plug 'KeitaNakamura/neodark.vim'
+Plug 'chriskempson/base16-vim'
 
 
-Plug 'w0rp/ale'
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+Plug 'jaxbot/semantic-highlight.vim'
 
 Plug 'Raimondi/delimitMate'
 

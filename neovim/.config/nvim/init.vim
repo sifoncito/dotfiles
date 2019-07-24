@@ -23,6 +23,7 @@ source $HOME/.config/nvim/plugins/plugin_settings.vim
 
 let g:deoplete#enable_at_startup = 1
 
+let g:neodark#background = '#202020'
 set completeopt+=noinsert
 set completeopt-=preview
 

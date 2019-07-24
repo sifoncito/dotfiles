@@ -1,0 +1,3 @@
+[submodule "/home/anon/.dotfiles/vim/.vim/pack/plugins/nerdtree"]
+	path = /home/anon/.dotfiles/vim/.vim/pack/plugins/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git

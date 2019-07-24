@@ -90,7 +90,7 @@ let g:solarized_termtrans=1
 set termguicolors     " enable true colors support
 
 
-colorscheme tender
+colorscheme base16-default-dark
 
 set t_ut=
 
