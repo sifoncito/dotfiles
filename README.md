@@ -1,8 +1,13 @@
 ## Info
 
-- Distro: `Arch Linux`
+- Distro: [`Pop!_OS`](https://pop.system76.com/)
 - Window Manager: `dwm`
 - Bar: `dwm bar`
-- Terminal Emulator: `kitty`
+- Terminal Emulator: `alacritty`
 - Editor: `neovim`
-- Font: `Fira Code`
+- Font: `cascadia`
+- Shell `bash`
+
+## setup links
+[neovim config](https://github.com/sifoncito/nvim)\
+[sucklees config](https://github.com/sifoncito/suckless)
