@@ -1,1 +1,42 @@
+"----------Theme-----------"
+set termguicolors
+"let g:onedark_termcolors=256
+"let g:onedark_hide_endofbuffer=1
+"let g:onedark_terminal_italics=1
+"colorscheme onedark
+
+"----------Basic configs----------"
+retab
+syntax on
+filetype on
+filetype plugin indent on
+set background=dark
 set number
+set nobackup
+set nocompatible
+set cursorline
+set encoding=UTF-8
+set ruler
+set showmatch
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set autowriteall
+set autoindent
+set visualbell
+set smartindent
+set fileformat=unix
+set backspace=indent,eol,start
+set complete=.,w,b,u
+set updatetime=100
+set hlsearch
+set incsearch
+
+"----------Status Line--------------"
+set statusline=
+set statusline+=\ %Y\ %F\ %M\ %R
+set statusline+=%=
+set statusline+=\ row:\ %l\ col:\ %c\ percent:\ %p%%
+set laststatus=2
+
